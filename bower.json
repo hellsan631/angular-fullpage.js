@@ -1,0 +1,35 @@
+{
+  "name": "Angular fullPage.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/hellsan631/angular-fullPage.js",
+  "authors": [
+    "Mathew Kleppin <mathew.kleppin@gmail.com>"
+  ],
+  "description": "A simple angular directive for fullPage.js",
+  "main": "src/jquery.logosDistort.js",
+  "ignore": [
+    ".jshintrc",
+    ".editorconfig",
+    ".sass-cache",
+    "sample",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "fullpage.js": "~2.6.9"
+  },
+  "keywords": [
+    "jquery",
+    "scrolling",
+    "single_page",
+    "one_page",
+    "sliding"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "angular-materialize": "*",
+    "angular-ui-router": "~0.2.15",
+    "Materialize": "materialize#~0.97.0"
+  }
+}
