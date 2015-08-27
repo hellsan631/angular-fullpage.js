@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ngfullPage.js')
+    .module('fullPage.js')
     .directive('fullPage', fullPage);
 
   fullPage.$inject = ['$timeout', '$window'];
