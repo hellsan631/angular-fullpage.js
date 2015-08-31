@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('fullPage.js')
+    .module('fullPage.js', [])
     .directive('fullPage', fullPage);
 
   fullPage.$inject = ['$timeout', '$window'];
@@ -39,9 +39,17 @@
 
         if (options && options.navigation) {
           options.afterRender = function() {
-            $("#fp-nav").find("a").removeAttr("href");
+
+            //We want to remove the HREF targets for navigation because they use hashbang
+            //They still work without the hash though, so its all good.
+            $('#fp-nav').find('a').removeAttr('href');
           };
         }
+
+        //if we are using a ui-router, we need to be able to handle anchor clicks without 'href="#thing"'
+        $(document).on('click', '[data-menuanchor]', function () {
+          $.fn.fullpage.moveTo($(this).attr('data-menuanchor'));
+        });
 
         return options;
       };

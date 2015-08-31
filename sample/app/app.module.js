@@ -3,7 +3,7 @@
 
   angular
     .module('sample-app', [
-      'ngfullPage.js',
+      'fullPage.js',
       'ui.router'
     ]);
 
