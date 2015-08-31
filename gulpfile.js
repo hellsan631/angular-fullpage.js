@@ -50,7 +50,7 @@ gulp.task('serve', ['serve-watch'], function() {
   //watch .scss files
 	gulp.watch(src, ['serve-watch']);
 
-  return gulp.src('sample')
+  return gulp.src('')
     .pipe(webserver({
       livereload: true,
       open: true
@@ -65,5 +65,5 @@ gulp.task('serve-watch', function(){
     }))
     .pipe(uglify())
     .pipe(concat(output.build))
-    .pipe(gulp.dest('sample/app/directives/'));
+    .pipe(gulp.dest(''));
 });

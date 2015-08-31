@@ -16,7 +16,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular": "~1.4.4",
     "fullpage.js": "~2.6.9"
   },
   "keywords": [
