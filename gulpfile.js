@@ -9,18 +9,13 @@ var uglify      = require('gulp-uglify');
 var webserver   = require('gulp-webserver');
 
 // --------------------------------------------------------------------
-// Settings{ base: 'src' }
+// Settings
 // --------------------------------------------------------------------
 
-var src = {
-  build: [
-    'angular-fullPage.js'
-  ]
-};
+var src = 'angular-fullPage.js';
 
 var output = {
-  build: '/',
-  build_js: 'angular-fullPage.min.js'
+  build: 'angular-fullPage.min.js'
 };
 
 // --------------------------------------------------------------------
@@ -37,13 +32,13 @@ var onError = function(err) {
 // --------------------------------------------------------------------
 
 gulp.task('build', function() {
-    return gulp.src(src.build)
+    return gulp.src(src)
       .pipe(plumber({
           errorHandler: onError
       }))
       .pipe(uglify())
-      .pipe(concat(output.build_js))
-      .pipe(gulp.dest(output.build));
+      .pipe(concat(output.build))
+      .pipe(gulp.dest(''));
 });
 
 // --------------------------------------------------------------------
@@ -53,7 +48,7 @@ gulp.task('build', function() {
 gulp.task('serve', ['serve-watch'], function() {
 
   //watch .scss files
-	gulp.watch('angular-fullPage.js', ['serve-watch']);
+	gulp.watch(src, ['serve-watch']);
 
   return gulp.src('sample')
     .pipe(webserver({
@@ -64,11 +59,11 @@ gulp.task('serve', ['serve-watch'], function() {
 });
 
 gulp.task('serve-watch', function(){
-  return gulp.src(src.build)
+  return gulp.src(src)
     .pipe(plumber({
         errorHandler: onError
     }))
     .pipe(uglify())
-    .pipe(concat(output.build_js))
-    .pipe(gulp.dest('sample/app/directives/'+output.build));
+    .pipe(concat(output.build))
+    .pipe(gulp.dest('sample/app/directives/'));
 });
