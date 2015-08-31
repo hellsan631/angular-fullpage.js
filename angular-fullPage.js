@@ -17,26 +17,20 @@
     return directive;
 
     function link(scope, element, attrs) {
-      var promise;
 
-      var createFullPage = function() {
-        promise = $timeout(function() {
-          angular.element(element).fullpage(sanatizeOptions(scope.options));
-        }, 1);
+      var rebuild = function() {
+        destroyFullPage();
+
+        angular.element(element).fullpage(sanatizeOptions(scope.options));
       };
 
-      var destroyFullPage = function(callback) {
-        if (promise) $timeout.cancel(promise);
-
+      var destroyFullPage = function() {
         if ($.fn.fullpage.destroy) {
           $.fn.fullpage.destroy('all');
         }
-
-        if (callback && typeof callback === 'function') callback();
       };
 
       var sanatizeOptions = function(options) {
-
         if (options && options.navigation) {
           options.afterRender = function() {
 
@@ -54,9 +48,7 @@
         return options;
       };
 
-      scope.$watch('options', function(newOptions) {
-        destroyFullPage(createFullPage);
-      }, true);
+      scope.$watch('options', rebuild, true);
 
       element.on('$destroy', destroyFullPage);
     }
