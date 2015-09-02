@@ -8,7 +8,7 @@ the use of fullPage.js within an angular app. There are several issues when usin
 version with an angular application that uses an internal router for displaying pages, and this repo
 aims to solve them.
 
-[Example](http://hellsan631.github.io/angular-fullpage.js/)
+[Example](http://hellsan631.github.io/angular-fullpage.js/) - [Source](https://github.com/hellsan631/angular-fullpage.js/tree/gh-pages)
 
 ### Installation
 
