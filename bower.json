@@ -1,18 +1,18 @@
 {
-  "name": "angular-fullPage.js",
-  "version": "0.1.0",
-  "homepage": "https://github.com/hellsan631/angular-fullPage.js",
+  "name": "angular-fullpage.js",
+  "version": "0.1.2",
+  "homepage": "http://hellsan631.github.io/angular-fullpage.js/",
   "authors": [
     "Mathew Kleppin <mathew.kleppin@gmail.com>"
   ],
-  "description": "A simple angular directive for fullPage.js",
+  "description": "A simple angular directive for fullpage.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hellsan631/angular-fullPage.js.git"
+    "url": "git://github.com/hellsan631/angular-fullpage.js.git"
   },
   "main": [
-    "angular-fullPage.js",
-    "angular-fullPage.min.js"
+    "angular-fullpage.js",
+    "angular-fullpage.min.js"
   ],
   "ignore": [
     ".jshintrc",
@@ -28,7 +28,7 @@
     "fullpage.js": "~2.6.9"
   },
   "keywords": [
-    "fullPage",
+    "fullpage",
     "angular",
     "directive",
     "jquery",

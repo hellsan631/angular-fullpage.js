@@ -1,14 +1,14 @@
 {
   "name": "angular-fullpage.js",
   "description": "A simple angular directive for fullPage.js",
-  "version": "0.1.0",
-  "main": "angular-fullPage.js",
+  "version": "0.1.2",
+  "main": "angular-fullpage.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hellsan631/angular-fullPage.js.git"
+    "url": "git://github.com/hellsan631/angular-fullpage.js.git"
   },
   "keywords": [
-    "fullPage",
+    "fullpage",
     "angular",
     "directive",
     "jquery",
@@ -19,8 +19,8 @@
   ],
   "files": [
     "sample",
-    "angular-fullPage.js",
-    "angular-fullPage.min.js",
+    "angular-fullpage.js",
+    "angular-fullpage.min.js",
     "package.json",
     "README.md"
   ],
@@ -42,9 +42,9 @@
   "authors": [
     "Mathew Kleppin <mathew.kleppin@gmail.com>"
   ],
-  "homepage": "https://github.com/hellsan631/angular-fullPage.js",
+  "homepage": "http://hellsan631.github.io/angular-fullpage.js/",
   "bugs": {
-    "url": "https://github.com/hellsan631/angular-fullPage.js/issues"
+    "url": "https://github.com/hellsan631/angular-fullpage.js/issues"
   },
   "license": "MIT"
 }
