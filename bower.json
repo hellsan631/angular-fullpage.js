@@ -6,11 +6,19 @@
     "Mathew Kleppin <mathew.kleppin@gmail.com>"
   ],
   "description": "A simple angular directive for fullPage.js",
-  "main": "angular-fullPage.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hellsan631/angular-fullPage.js.git"
+  },
+  "main": [
+    "angular-fullPage.js",
+    "angular-fullPage.min.js",
+  ],
   "ignore": [
     ".jshintrc",
     ".editorconfig",
     ".sass-cache",
+    "npm-debug.log",
     "sample",
     "node_modules",
     "bower_components"
@@ -20,13 +28,14 @@
     "fullpage.js": "~2.6.9"
   },
   "keywords": [
+    "fullPage",
+    "angular",
+    "directive",
     "jquery",
     "scrolling",
     "single_page",
     "one_page",
-    "sliding",
-    "fullPage",
-    "angular"
+    "sliding"
   ],
   "license": "MIT",
   "devDependencies": {

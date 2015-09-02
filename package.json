@@ -5,16 +5,17 @@
   "main": "angular-fullPage.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:hellsan631/angular-fullPage.js.git"
+    "url": "git://github.com/hellsan631/angular-fullPage.js.git"
   },
   "keywords": [
+    "fullPage",
+    "angular",
+    "directive",
     "jquery",
     "scrolling",
     "single_page",
     "one_page",
-    "sliding",
-    "fullPage",
-    "angular"
+    "sliding"
   ],
   "files": [
     "sample",
@@ -46,5 +47,4 @@
     "url": "https://github.com/hellsan631/angular-fullPage.js/issues",
   },
   "license": "MIT"
-
 }
