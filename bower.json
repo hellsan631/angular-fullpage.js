@@ -12,7 +12,7 @@
   },
   "main": [
     "angular-fullPage.js",
-    "angular-fullPage.min.js",
+    "angular-fullPage.min.js"
   ],
   "ignore": [
     ".jshintrc",
