@@ -1,7 +1,7 @@
 {
   "name": "angular-fullpage.js",
   "description": "A simple angular directive for fullPage.js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "angular-fullpage.js",
   "repository": {
     "type": "git",

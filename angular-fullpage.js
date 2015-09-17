@@ -21,7 +21,9 @@
       var rebuild = function() {
         destroyFullPage();
 
-        angular.element(element).fullpage(sanatizeOptions(scope.options));
+        requestAnimationFrame(function(){
+          angular.element(element).fullpage(sanatizeOptions(scope.options));
+        });
       };
 
       var destroyFullPage = function() {
