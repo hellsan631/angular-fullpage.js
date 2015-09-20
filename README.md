@@ -2,6 +2,8 @@
 ====
 
 [![Code Climate](https://codeclimate.com/github/hellsan631/angular-fullPage.js/badges/gpa.svg)](https://codeclimate.com/github/hellsan631/angular-fullPage.js)
+[![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+
 
 A simple [fullPage.js](https://github.com/alvarotrigo/fullPage.js) directive that allows
 the use of fullPage.js within an angular app. There are several issues when using the the vanilla jquery
