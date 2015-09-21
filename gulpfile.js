@@ -63,7 +63,6 @@ gulp.task('serve-watch', function(){
     .pipe(plumber({
         errorHandler: onError
     }))
-    .pipe(uglify())
     .pipe(concat(output.build))
     .pipe(gulp.dest('sample/app/directives/'));
 });

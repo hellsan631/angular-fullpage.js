@@ -11,34 +11,21 @@
 		<p>Create Beautiful Fullscreen Scrolling Websites</p>
 		<img src="images/fullPage.png" alt="fullPage" />
 	</div>
-	<div class="section" id="section1">
+	<div class="section active" id="section1">
 	    <div class="slide">
-			<div class="intro">
-				<h1>Create Sliders</h1>
-				<p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
-				<img src="images/slider.png" alt="slider" />
+				<div class="intro">
+					<h1>Create Sliders</h1>
+					<p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+					<img src="images/slider.png" alt="slider" /> <br/>
+					<button ng-click="vm.addSlide();">Click Me to Add another Slide!</button>
+				</div>
 			</div>
 
-		</div>
-	    <div class="slide">
+    <div ng-repeat="slide in vm.slides" class="slide">
 			<div class="intro">
-				<img src="images/1.png" alt="simple" />
-				<h1>Simple</h1>
-				<p>Easy to use. Configurable and customizable.</p>
-			</div>
-		</div>
-	    <div class="slide">
-			<div class="intro">
-				<img src="images/2.png" alt="Cool" />
-				<h1>Cool</h1>
-				<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
-			</div>
-		</div>
-	    <div class="slide">
-			<div class="intro">
-				<img src="images/3.png" alt="Compatible" />
-				<h1>Compatible</h1>
-				<p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+				<img ng-src="{{ slide.src }}" alt="simple" />
+				<h1>{{ slide.title }}</h1>
+				<p>{{ slide.description }}</p>
 			</div>
 		</div>
 	</div>
