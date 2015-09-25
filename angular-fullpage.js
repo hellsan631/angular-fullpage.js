@@ -5,9 +5,9 @@
     .module('fullPage.js', [])
     .directive('fullPage', fullPage);
 
-  fullPage.$inject = ['$timeout', '$window'];
+  fullPage.$inject = ['$timeout'];
 
-  function fullPage($timeout, $window) {
+  function fullPage($timeout) {
     var directive = {
       restrict: 'A',
       scope: {options: '='},
@@ -16,16 +16,12 @@
 
     return directive;
 
-    function link(scope, element, attrs) {
-
-      var initialized = false;
+    function link(scope, element) {
       var pageIndex;
       var slideIndex;
 
       var rebuild = function() {
         destroyFullPage();
-
-        console.log('rebuilt');
 
         angular.element(element).fullpage(sanatizeOptions(scope.options));
       };

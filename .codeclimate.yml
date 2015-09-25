@@ -1,0 +1,5 @@
+languages:
+   JavaScript: true
+exclude_paths:
+- "sample/directives/angular-fullPage.min.js"
+- "angular-fullPage.min.js"
