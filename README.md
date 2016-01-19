@@ -1,6 +1,7 @@
 [fullPage.js](https://github.com/alvarotrigo/fullPage.js) Angular Directive
-## Enhanced by [BrowserStack](http://browserstack.com/)
 ====
+
+## Enhanced by [BrowserStack](http://browserstack.com/)
 
 [![Code Climate](https://codeclimate.com/github/hellsan631/angular-fullPage.js/badges/gpa.svg)](https://codeclimate.com/github/hellsan631/angular-fullPage.js)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
