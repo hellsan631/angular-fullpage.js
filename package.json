@@ -29,8 +29,8 @@
     "post-install": "bower install"
   },
   "dependencies": {
-    "jquery": ">=1.6.0",
-    "angular": ">=1.3.0"
+    "angular": "~1.4.4",
+    "fullpage.js": "~2.7.5"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
