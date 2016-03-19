@@ -19,11 +19,16 @@
     function link(scope, element) {
       var pageIndex;
       var slideIndex;
+      var afterRender;
 
       var rebuild = function() {
         destroyFullPage();
 
         angular.element(element).fullpage(sanatizeOptions(scope.options));
+
+        if (typeof afterRender === 'function') {
+          afterRender();
+        }
       };
 
       var destroyFullPage = function() {
@@ -33,16 +38,30 @@
       };
 
       var sanatizeOptions = function(options) {
-        options.onLeave = function(page, next){
-          pageIndex = next;
-        };
+        var onLeave;
+        var onSlideLeave;
 
-        options.onSlideLeave = function(anchorLink, page, slide, direction, next){
-          pageIndex   = page;
-          slideIndex  = next;
-        };
+        if (typeof options === 'object') {
+          if (options.afterRender) {
+            afterRender = options.afterRender;
+          }
 
-        options.afterRender = function(){
+          if (options.onLeave) {
+            onLeave = options.onLeave;
+          }
+
+          if (options.onSlideLeave) {
+            onSlideLeave = options.onSlideLeave;
+          }
+        } else if(typeof options === 'undefined') {
+          options = {};
+        }
+
+        options.afterRender = afterAngularRender;
+        options.onLeave = onAngularLeave;
+        options.onSlideLeave = onAngularSlideLeave;
+
+        function afterAngularRender() {
           //We want to remove the HREF targets for navigation because they use hashbang
           //They still work without the hash though, so its all good.
           if (options && options.navigation) {
@@ -54,7 +73,26 @@
               $.fn.fullpage.silentMoveTo(pageIndex, slideIndex);
             });
           }
-        };
+        }
+
+        function onAngularLeave(page, next){
+          pageIndex = next;
+
+          if (typeof onLeave === 'function') {
+            onLeave();
+          }
+        }
+
+        function onAngularSlideLeave(anchorLink, page, slide, direction, next) {
+          pageIndex   = page;
+          slideIndex  = next;
+
+          if (typeof onSlideLeave === 'function') {
+            onSlideLeave();
+          }
+        }
+
+        //options.afterRender = afterAngularRender;
 
         //if we are using a ui-router, we need to be able to handle anchor clicks without 'href="#thing"'
         $(document).on('click', '[data-menuanchor]', function () {

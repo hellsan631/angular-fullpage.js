@@ -1,4 +1,4 @@
-<ul id="menu">
+<ul id="menu" ng-click="vm.moog('asd')" >
 	<li data-menuanchor="firstPage"><a>First slide</a></li>
 	<li data-menuanchor="secondPage"><a>Second slide</a></li>
 	<li data-menuanchor="3rdPage"><a>Third slide</a></li>
@@ -22,7 +22,7 @@
 			</div>
 
     <div ng-repeat="slide in vm.slides" class="slide">
-			<div class="intro">
+			<div class="intro" ng-click="vm.moog('ddd')" >
 				<img ng-src="{{ slide.src }}" alt="simple" />
 				<h1>{{ slide.title }}</h1>
 				<p>{{ slide.description }}</p>
@@ -31,7 +31,7 @@
 	</div>
 	<div class="section" id="section2">
 		<div class="intro">
-			<h1>Example</h1>
+			<h1 ng-click="vm.moog('sss')" >Example</h1>
 			<p>HTML markup example to define 4 sections.</p>
 			<img src="images/example2.png" alt="example" />
 		</div>

@@ -5,9 +5,9 @@
     .module('sample-app')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state'];
+  MainController.$inject = ['$state', '$compile', '$scope'];
 
-  function MainController($state){
+  function MainController($state, $compile, $scope){
 
     var _this = this;
 
@@ -16,6 +16,8 @@
 			anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
 			menu: '#menu'
     };
+
+    this.moog = function(merg){ console.log(merg); };
 
     this.slides = [
       {
@@ -42,9 +44,7 @@
         src: 'images/1.png'
       });
 
-      console.log('added slide');
-
-      console.log(_this);
+      //$compile(angular.element($('.slide')))($scope);
     };
 
   }
