@@ -1,6 +1,6 @@
 {
   "name": "angular-fullpage.js",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "http://hellsan631.github.io/angular-fullpage.js/",
   "authors": [
     "Mathew Kleppin <mathew.kleppin@gmail.com>"
@@ -24,7 +24,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular": "~1.4.4",
+    "angular": ">=1.2.0",
     "fullpage.js": "~2.7.7"
   },
   "keywords": [
