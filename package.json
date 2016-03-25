@@ -1,7 +1,7 @@
 {
   "name": "angular-fullpage.js",
   "description": "A simple angular directive for fullPage.js",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "angular-fullpage.js",
   "repository": {
     "type": "git",
@@ -29,8 +29,8 @@
     "post-install": "bower install"
   },
   "dependencies": {
-    "angular": "~1.4.4",
-    "fullpage.js": "~2.7.5"
+    "angular": ">=1.2.0",
+    "fullpage.js": "~2.7.7"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
