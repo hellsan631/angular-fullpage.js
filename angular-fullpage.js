@@ -20,6 +20,24 @@
       var pageIndex;
       var slideIndex;
       var afterRender;
+      var onLeave;
+      var onSlideLeave;
+
+      if (typeof scope.options === 'object') {
+        if (scope.options.afterRender) {
+          afterRender = scope.options.afterRender;
+        }
+
+        if (scope.options.onLeave) {
+          onLeave = scope.options.onLeave;
+        }
+
+        if (scope.options.onSlideLeave) {
+          onSlideLeave = scope.options.onSlideLeave;
+        }
+      } else if(typeof options === 'undefined') {
+        scope.options = {};
+      }
 
       var rebuild = function() {
         destroyFullPage();
@@ -38,25 +56,6 @@
       };
 
       var sanatizeOptions = function(options) {
-        var onLeave;
-        var onSlideLeave;
-
-        if (typeof options === 'object') {
-          if (options.afterRender) {
-            afterRender = options.afterRender;
-          }
-
-          if (options.onLeave) {
-            onLeave = options.onLeave;
-          }
-
-          if (options.onSlideLeave) {
-            onSlideLeave = options.onSlideLeave;
-          }
-        } else if(typeof options === 'undefined') {
-          options = {};
-        }
-
         options.afterRender = afterAngularRender;
         options.onLeave = onAngularLeave;
         options.onSlideLeave = onAngularSlideLeave;
@@ -91,8 +90,6 @@
             onSlideLeave();
           }
         }
-
-        //options.afterRender = afterAngularRender;
 
         //if we are using a ui-router, we need to be able to handle anchor clicks without 'href="#thing"'
         $(document).on('click', '[data-menuanchor]', function () {
