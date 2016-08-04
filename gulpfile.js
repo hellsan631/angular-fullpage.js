@@ -48,14 +48,13 @@ gulp.task('build', function() {
 gulp.task('serve', ['serve-watch'], function() {
 
   //watch .scss files
-	gulp.watch(src, ['serve-watch']);
+	gulp.watch('angular-fullPage.js', ['serve-watch']);
 
-  return gulp.src('sample')
+  gulp.src('sample')
     .pipe(webserver({
       livereload: true,
       open: true
     }));
-
 });
 
 gulp.task('serve-watch', function(){
