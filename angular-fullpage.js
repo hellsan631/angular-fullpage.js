@@ -74,21 +74,23 @@
           }
         }
 
-        function onAngularLeave(page, next){
+        function onAngularLeave(page, next, direction){
+
+          if (typeof onLeave === 'function' && onLeave(page, next, direction) === false) {
+            return false;
+          }
           pageIndex = next;
 
-          if (typeof onLeave === 'function') {
-            onLeave();
-          }
         }
 
         function onAngularSlideLeave(anchorLink, page, slide, direction, next) {
+
+          if (typeof onSlideLeave === 'function' && onSlideLeave(anchorLink, page, slide, direction, next) === false) {
+            return false;
+          }
           pageIndex   = page;
           slideIndex  = next;
 
-          if (typeof onSlideLeave === 'function') {
-            onSlideLeave();
-          }
         }
 
         //if we are using a ui-router, we need to be able to handle anchor clicks without 'href="#thing"'
