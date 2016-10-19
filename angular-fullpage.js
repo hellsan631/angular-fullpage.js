@@ -42,7 +42,7 @@
       var rebuild = function() {
         destroyFullPage();
 
-        angular.element(element).fullpage(sanatizeOptions(scope.options));
+        $(element).fullpage(sanatizeOptions(scope.options));
 
         if (typeof afterRender === 'function') {
           afterRender();
