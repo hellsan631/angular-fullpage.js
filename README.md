@@ -80,7 +80,7 @@ function MainController(){
   _this.mainOptions = {
     sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
     navigation: true,
-    navigationPosition: 'right'
+    navigationPosition: 'right',
     scrollingSpeed: 1000
   }
 
