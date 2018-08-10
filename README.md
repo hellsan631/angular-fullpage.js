@@ -8,7 +8,7 @@
 
 
 A simple [fullPage.js](https://github.com/alvarotrigo/fullPage.js) directive that allows
-the use of fullPage.js within an angular app. There are several issues when using the the vanilla jquery
+the use of fullPage.js within an angular app. There are several issues when using the vanilla jquery
 version with an angular application that uses an internal router for displaying pages, and this repo
 aims to solve them.
 
