@@ -4,7 +4,7 @@
 ## Enhanced by [BrowserStack](http://browserstack.com/)
 
 [![Code Climate](https://codeclimate.com/github/hellsan631/angular-fullPage.js/badges/gpa.svg)](https://codeclimate.com/github/hellsan631/angular-fullPage.js)
-[![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT) [![Greenkeeper badge](https://badges.greenkeeper.io/hellsan631/angular-fullpage.js.svg)](https://greenkeeper.io/)
 
 
 A simple [fullPage.js](https://github.com/alvarotrigo/fullPage.js) directive that allows
