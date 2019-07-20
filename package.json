@@ -30,13 +30,13 @@
   },
   "dependencies": {
     "angular": ">=1.2.0",
-    "fullpage.js": "~2.7.7"
+    "fullpage.js": "~3.0.7"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.0.1",
-    "gulp-uglify": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
     "gulp-webserver": "^0.9.1"
   },
   "authors": [
